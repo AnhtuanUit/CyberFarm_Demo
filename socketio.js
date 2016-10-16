@@ -13,7 +13,7 @@ function connectIO(server) {
         // On send message chat
         socket.on('device', function (data) {
             console.log(data);
-            socket.broadcast.emit(data);
+            io.sockets.emit('device', data);
         });
 
 
